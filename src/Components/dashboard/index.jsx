@@ -1,7 +1,7 @@
 import {  useNavigate } from "react-router-dom";
 import { dashboard_links } from "../utils";
 
-function Dashboard() {
+function Dashboard({logOut}) {
     
   const navigate = useNavigate();
   function navigete1(path) {
@@ -17,6 +17,7 @@ function Dashboard() {
           </div>
         ))}
       </div>
+        <button className="button bg-blue-600" onClick={logOut}>Exit</button>
     </div>
   );
 }
